@@ -196,13 +196,4 @@ CAPTURE_PACKET_COUNT = 10000
 CAPTURE_FILENAME_PREFIX = "attack_capture_"
 ```
 
-**Why 50,000 PPS as the default threshold?**
-
-According to Cloudflare's 2025 Q2 DDoS Threat Report, around 85% of observed Layer 3/4 (network-layer) DDoS attacks did not exceed 50,000 packets per second (PPS). This means 50k PPS is above the vast majority of typical attacks while still being a conservative early-warning level for unprotected servers (e.g., most VPS setups can handle 100k–500k PPS before major issues, but smaller floods can still cause disruption).
-  -It's a good starting point for smaller servers or early detection.
-  -For high-traffic sites (e.g., gaming/streaming), raise it to 100,000–200,000 PPS to avoid false positives.
-  -Source: [Cloudflare DDoS Threat Report for 2025 Q2](https://blog.cloudflare.com/ddos-threat-report-for-2025-q2/)
-
-Adjust these values based on your server's normal traffic baseline for best results!
-
 ---
